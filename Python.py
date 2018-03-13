@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, abort, session
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'F34TF$($e34D';
 
 @app.route('/')
 def home():
@@ -9,10 +8,8 @@ def home():
 
 @app.route('/signup', methods=['POST'])
 def signup():
-    #session['username'] = request.form['username']
-    #session['message'] = request.form['message']
     stream_of_words = request.form['words']
     return render_template('result.html',words = stream_of_words)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', threaded=True, debug=True)
+    app.run(host = '0.0.0.0', threaded=True, debug=True)
