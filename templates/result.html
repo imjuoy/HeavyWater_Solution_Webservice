@@ -10,7 +10,7 @@
     <br>
     <br>
     <br>
-    <form name = "IndexPage" method="post" action="{{ url_for('signup') }}">
+    <form name = "IndexPage" method="get" action="{{ url_for('getDocuments') }}">
      Please enter the series of words: <input type="textarea" name="words" height="230px" width="70px" />
     <button type="submit">Submit</button>
     <br><br><br><br>

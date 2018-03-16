@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/signup', methods=['POST'])
+@app.route('/getDocuments', methods=['GET'])
 def signup():
     stream_of_words = request.form['words']
     return render_template('result.html',words = stream_of_words)
