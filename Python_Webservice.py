@@ -10,7 +10,6 @@ def home():
 
 @app.route('/signup', methods=['POST'])
 def signup():
-<<<<<<< HEAD
     global counter
     stream_of_words = request.form['words']
     def initialization():
