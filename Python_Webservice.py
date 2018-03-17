@@ -16,7 +16,7 @@ def signup():
     	import numpy as np
    	import pandas as pd
     	from sklearn.feature_extraction.text import TfidfVectorizer
-	data = pd.read_csv("shuffled-full-set-hashed.csv", header=None)
+	data = pd.read_csv("https://s3.amazonaws.com/heavywatertest/shuffled-full-set-hashed.csv", header=None)
 	data.columns = ['y', 'X']
 	data = data[data.y.str.isupper()]
 	vectorizer = TfidfVectorizer(min_df=1,max_features=300)
