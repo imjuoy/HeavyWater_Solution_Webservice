@@ -1,11 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, abort, session
 
 app = Flask(__name__)
-<<<<<<< HEAD
 lmfit = 0
 counter = 0
-=======
->>>>>>> 0f01286756da0bdb182b8c2955bbb0c19924b919
 
 @app.route('/')
 def home():
@@ -53,10 +50,8 @@ def signup():
     elif counter > 0:
 	result=predict(stream_of_words)
     	return render_template('result.html',result)
-=======
     stream_of_words = request.form['words']
     return render_template('result.html',words = stream_of_words)
->>>>>>> 0f01286756da0bdb182b8c2955bbb0c19924b919
 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', threaded=True, debug=True)
